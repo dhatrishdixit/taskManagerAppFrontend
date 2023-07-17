@@ -15,9 +15,9 @@ const Home = () => {
   const [refresh,setRefresh] = useState(false);
   const {isAuthenticated} = useContext(Context);
 
-  if(!isAuthenticated){
-    return <Navigate to={'/login'} />
-  }
+  // if(!isAuthenticated){
+  //   return <Navigate to={'/login'} />
+  // }
   const submitHandler =async  (e) => {
     e.preventDefault();
      try {
@@ -91,6 +91,10 @@ const Home = () => {
         }
   }, [refresh])
   
+  
+  if(!isAuthenticated){
+    return <Navigate to={'/login'} />
+  }
   
 
   return (

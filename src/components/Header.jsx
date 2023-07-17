@@ -7,18 +7,20 @@ import toast from "react-hot-toast";
 const Header = () => {
     
     const {isAuthenticated,setIsAuthenticated,loading,setLoading} = useContext(Context);
-    //  console.log(isAuthenticated);
+    
 
     const logoutHandler =async (e) =>{
+      console.log("working");
          setLoading(true);
         e.preventDefault();
         try{ const {data} = await axios.get(`${server}/users/logout`,{
             withCredentials:true,
         }); 
-        
+        console.log("working");
         toast.success(data.message);
         setIsAuthenticated(false);
         setLoading(false);
+        console.log("working");
      }catch(e){
         toast.error(e.response.data.message);
         setIsAuthenticated(true);
@@ -36,7 +38,9 @@ const Header = () => {
     <article>
 
 
-           <Link to ={"/"}>Home</Link>
+        <Link to ={"/"}>
+            Home
+       </Link>   
         <Link to ={"/profile"}>
             Profile
         </Link>
