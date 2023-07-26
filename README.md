@@ -1,3 +1,3 @@
 # taskManagerAppFrontend
 built with react,
-working link - https://64b4fcc22458f8460143a1fb--silver-tulumba-7377a5.netlify.app
+working link - https://melodic-monstera-9fa78a.netlify.app
